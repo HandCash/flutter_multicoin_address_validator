@@ -1,12 +1,21 @@
-import 'package:flutter_multicoin_address_validator/src/coins.dart';
-
-import 'coins/coin_interface.dart';
+import 'coins/coins.dart';
 
 class WalletAddressWalidator {
+  final List<Coin> supportedCoins = [
+  Solana(),
+  Avalanche(),
+  Tron(),
+  Algorand(),
+  Stellar(),
+  Flow(),
+  Hedera(),
+];
+
+
   bool validate(String address, String currencyNameOrSymbol) {
     return _findCurrency(currencyNameOrSymbol).validator.isValidAddress(address);
   }
 
   Coin _findCurrency(String nameOrSymbol) =>
-      coins.firstWhere((currency) => currency.name == nameOrSymbol || currency.symbol == nameOrSymbol);
+      supportedCoins.firstWhere((currency) => currency.name == nameOrSymbol || currency.symbol == nameOrSymbol);
 }
