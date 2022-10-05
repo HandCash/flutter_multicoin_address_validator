@@ -1,4 +1,4 @@
-import 'package:flutter_multicoin_address_validator/src/currencies.dart';
+import 'package:flutter_multicoin_address_validator/src/coins.dart';
 
 import 'coins/coin_interface.dart';
 
@@ -8,5 +8,5 @@ class WalletAddressWalidator {
   }
 
   Coin _findCurrency(String nameOrSymbol) =>
-      CURRENCIES.firstWhere((currency) => currency.name == nameOrSymbol || currency.symbol == nameOrSymbol);
+      coins.firstWhere((currency) => currency.name == nameOrSymbol || currency.symbol == nameOrSymbol);
 }

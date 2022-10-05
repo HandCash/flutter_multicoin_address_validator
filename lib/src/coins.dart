@@ -8,7 +8,7 @@ import 'package:flutter_multicoin_address_validator/src/coins/tron.dart';
 
 import 'coins/coin_interface.dart';
 
-final List<Coin> CURRENCIES = [
+final List<Coin> coins = [
   Solana(),
   Avalanche(),
   Tron(),
