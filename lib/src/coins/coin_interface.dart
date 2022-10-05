@@ -6,4 +6,6 @@ abstract class Coin {
   final AbstractValidator validator;
 
   Coin(this.name, this.symbol, this.validator);
+
+  bool isAddressValid(String address) => validator.isValidAddress(address);
 }
