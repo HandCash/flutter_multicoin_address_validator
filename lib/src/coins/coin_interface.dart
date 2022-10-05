@@ -7,5 +7,5 @@ abstract class Coin {
 
   Coin(this.name, this.symbol, this.validator);
 
-  bool isAddressValid(String address) => validator.isValidAddress(address);
+  bool isValidAddress(String address) => validator.isValidAddress(address);
 }
