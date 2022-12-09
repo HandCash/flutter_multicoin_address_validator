@@ -1,3 +1,5 @@
+import 'package:flutter_multicoin_address_validator/src/coins/bsv.dart';
+
 import 'coins/coins.dart';
 
 class WalletAddressWalidator {
@@ -9,6 +11,7 @@ class WalletAddressWalidator {
   Stellar(),
   Flow(),
   Hedera(),
+  BSV(),
 ];
 
 
